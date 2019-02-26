@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.scss'
-export default class Home extends React.Component {
+export default class HeaderTop extends React.Component {
   render() {
     return (
       <div className="headerTop">
@@ -13,8 +13,8 @@ export default class Home extends React.Component {
             <i className="iconfont icon-sousuo icon"></i>
             <span className="placeholder">请输入项目名称</span>
           </div>
-          <i className="iconfont changeBtn icon-ditu"></i>
         </div>
+        <i className="iconfont changeBtn icon-ditu"></i>
       </div>
     )
   }

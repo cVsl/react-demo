@@ -1,0 +1,41 @@
+.selectTypes{
+  position: relative;
+  height: .88rem;
+  background: #fff;
+  border-bottom: 1px solid #ededed;
+  .list{
+    display: flex;
+    .items{
+      flex: 1;
+      border-right: 1px solid #ededed;
+      font-size: .3rem;
+      color: #333;
+      text-align: center;
+      line-height: .88rem;
+      &:last-child {
+        border-right: none;
+      }
+      &.isSelect{
+        color: #3395ff;
+      }
+    }
+  }
+  .selectList{
+    position: absolute;
+    top: 0.88rem;
+    background: #fff;
+    width: 100vw;
+    max-height: calc(100vh - 2.74rem);
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    .items{
+      height: .7rem;
+      padding: 0 .3rem;
+      font-size: .28rem;
+      line-height: .7rem;
+      color: #333;
+      border-bottom: 1px solid #ededed;
+    }
+  }
+}
