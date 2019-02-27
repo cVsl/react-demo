@@ -1,5 +1,6 @@
-@import 'reset';
-
+@import './reset.scss';
+@import './antd-mobile.scss';
+@import './main.scss';
 html,body {
   width: 100vw;
   height:100%;

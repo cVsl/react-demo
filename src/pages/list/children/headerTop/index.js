@@ -8,7 +8,7 @@ export default class HeaderTop extends React.Component {
           <span className="cityName">上海</span>
           <i className="iconfont icon icon-zhankai"></i>
         </div>
-        <div className="searchBtn">
+        <div className="searchBtn" onClick={()=>{this.props.history.push({pathname: '/search'})}}>
           <div className="_wrap clearfix">
             <i className="iconfont icon-sousuo icon"></i>
             <span className="placeholder">请输入项目名称</span>

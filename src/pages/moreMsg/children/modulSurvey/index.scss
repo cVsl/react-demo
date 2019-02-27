@@ -1,0 +1,48 @@
+.modulSurvey{
+  .msgBox{
+    margin-top: .2rem;
+    background: #fff;
+    .boxTitle{
+      height: .82rem;
+      padding: 0 .3rem;
+      line-height: .82rem;
+      font-size: .34rem;
+      color: #333;
+      border-bottom: 1px solid #ededed;
+    }
+    .msg{
+      padding: .2rem .3rem;
+    }
+    .goodMsg,.badMsg{
+      padding: .2rem .3rem;
+      .value{
+        font-size: .3rem;
+        color: #333;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+.mt20{
+  margin-top: .2rem;
+}
+.showItem{
+  .phone{
+    .people, .tel {
+      float: left;
+      height: .56rem;
+      line-height: .56rem;
+      margin-right: .1rem;
+      color: #333;
+    }
+    .pic{
+      float: left;
+      width: .56rem;
+      height: .56rem;
+      font-size: .4rem;
+      color: #3395ff;
+      text-align: center;
+      line-height: .56rem;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.modulMatch{
+  .msgBox{
+    margin-top: .2rem;
+    background: #fff;
+    .boxTitle{
+      height: .82rem;
+      padding: 0 .3rem;
+      line-height: .82rem;
+      font-size: .34rem;
+      color: #333;
+      border-bottom: 1px solid #ededed;
+    }
+    .msg{
+      padding: .2rem .3rem;
+      font-size: .3rem;
+      line-height: 1.5;
+      color: #333;
+      .iline{
+        font-size: .3rem;
+        line-height: 1.5;
+        .name{
+          color: #999;
+        }
+        .value{
+          color: #333;
+          text-indent: .3rem;
+        }
+      }
+    }
+  }
+}
+.mt20{
+  margin-top: .2rem;
+}
+.tip{
+  height: .88rem;
+  padding-left: .3rem;
+  line-height: .88rem;
+  font-size: .3rem;
+  color: #333;
+}

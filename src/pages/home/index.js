@@ -8,7 +8,7 @@ export default class Home extends React.Component {
       <div className="home page page_bg">
         <Navtitle title="投资物业" goBack={this.props.history.goBack}/>
         <div className="banner">
-          <img className="pic" src={require('../../assets/img/banner.png')} alt='' />
+          <img className="pic" src={require('../../assets/img/banner.jpg')} alt='' />
         </div>
         <div className="content page_bd">
           <div className="destine items clearfix" onClick={() => this.routerTo(15)}>
@@ -30,7 +30,7 @@ export default class Home extends React.Component {
   routerTo (type) {
     if (type === 20) {
       this.props.history.push({
-        pathname: `/detail/${type}`,
+        pathname: `/test`,
         query: {
           type: type
         }

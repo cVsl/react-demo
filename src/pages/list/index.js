@@ -8,10 +8,10 @@ export default class Home extends React.Component {
     return (
       <div className="page page_bg">
         <NavTitle title={this.state.title} goBack={this.props.history.goBack}/>
-        <HeaderTop></HeaderTop>
+        <HeaderTop history={this.props.history}></HeaderTop>
         <TypeList></TypeList>
         <div className="page_bd">
-          <ListItem listType={this.state.type}></ListItem>
+          <ListItem listType={this.state.type} history={this.props.history}></ListItem>
         </div>
       </div>
     )

@@ -1,0 +1,35 @@
+.connet{
+  position: relative;
+  height: .8rem;
+  width: 100vw;
+  padding: 0 .3rem;
+  background: #fff;
+  line-height: .8rem;
+  font-size: .34rem;
+  color: #333;
+  border-top: 1px solid #ededed;
+  overflow: hidden;
+  .phone{
+    position: absolute;
+    right: .3rem;
+    top: 0;
+    display: block;
+    height: .8rem;
+    line-height: .8rem;
+    font-size: .34rem;
+    color: #333;
+    .tel{
+      float: left;
+    }
+    .icon{
+      float: left;
+      width: .5rem;
+      height: .8rem;
+      color: #3395ff;
+      font-size: .46rem;
+      text-align: center;
+      line-height: .8rem;
+      margin-left: .1rem;
+    }
+  }
+}

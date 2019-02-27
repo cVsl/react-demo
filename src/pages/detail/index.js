@@ -1,22 +1,50 @@
 import React from 'react';
-// import PropTypes from 'prop-types'
+import './index.scss';
 import NavTitle from '../../components/navTitle/index.js';
-// import increaseAction from '../../store/action'
 import { connect } from 'react-redux'
+import { Carousel, WingBlank } from 'antd-mobile';
+import BaseMsg from './children/baseMsg'
 class Detail extends React.Component {
   render() {
-    const { value, num } = this.props
     return (
       <div className="page page_bg">
-        <NavTitle title='redux测试' goBack={this.props.history.goBack}/>
+        <NavTitle title='项目详情' goBack={this.props.history.goBack}/>
         <div className="page_bd">
-          <div style={{height:'100vh',background:'#fff'}}>
-            <span>userName:{num}---passWord:{value}</span>
-            <br />
-            <button onClick={this.onIncreaseClick.bind(this)}>btn1</button>
-            <br />
-            <button onClick={this.onIncreaseClick2.bind(this)}>btn2</button>
-          </div>
+          <WingBlank>
+            <Carousel
+              autoplay={true}
+              infinite
+              beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
+              afterChange={index => console.log('slide to', index)}
+            >
+              {this.state.data.map(val => (
+                <a
+                  key={val}
+                  href="http://www.alipay.com"
+                  style={{ display: 'inline-block', width: '100%', height: '3.12rem' }}
+                >
+                  <img
+                    src={`https://zos.alipayobjects.com/rmsportal/${val}.png`}
+                    alt=""
+                    style={{ width: '100%', verticalAlign: 'top' }}
+                    onLoad={() => {
+                      // fire window resize event to change height
+                      window.dispatchEvent(new Event('resize'));
+                      this.setState({ imgHeight: 'auto' });
+                    }}
+                  />
+                </a>
+              ))}
+            </Carousel>
+          </WingBlank>
+          <BaseMsg history={this.props.history} pageId={this.props.match.params.id}></BaseMsg>
+        </div>
+        <div className="connet">
+          <span className="name"></span>
+          <a className="phone clearfix" href="tel:12345678901">
+            <span className="tel">12345678901</span>
+            <i className="iconfont icon-dianhua icon"></i>
+          </a>
         </div>
       </div>
     )
@@ -24,9 +52,15 @@ class Detail extends React.Component {
   constructor(props, context) {
     super(props, context)
     this.state = {
+      data: ['1', '2', '3']
     };
   }
   componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        data: ['AiyWuByWklrrUDlFignR', 'TekJlZRVCjLFexlOCuWn', 'IJOtIlfsYdTyaDTRVrLI'],
+      });
+    }, 100)
     console.log('location:', this.props.location)
     console.log('match:', this.props.match);
   }
