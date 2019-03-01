@@ -1,6 +1,6 @@
 import React from 'react';
 import Navtitle from '../../components/navTitle/index.js';
-import { Tabs, WhiteSpace } from 'antd-mobile';
+import { Tabs } from 'antd-mobile';
 import ModulSurvey from './children/modulSurvey'
 import ModulMatch from './children/modulMatch'
 import ModulProgress from './children/modulProgress'
@@ -36,7 +36,6 @@ export default class MoreMsg extends React.Component {
               <ModulResult></ModulResult>
             </div>
           </Tabs>
-          <WhiteSpace />
         </div>
       </div>
     )

@@ -14,7 +14,7 @@ export default class HeaderTop extends React.Component {
             <span className="placeholder">请输入项目名称</span>
           </div>
         </div>
-        <i className="iconfont changeBtn icon-ditu"></i>
+        <i className="iconfont changeBtn icon-ditu" onClick={()=>{this.props.history.push({pathname: '/load'})}}></i>
       </div>
     )
   }

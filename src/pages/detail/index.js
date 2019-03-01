@@ -2,7 +2,7 @@ import React from 'react';
 import './index.scss';
 import NavTitle from '../../components/navTitle/index.js';
 import { connect } from 'react-redux'
-import { Carousel, WingBlank } from 'antd-mobile';
+import { Carousel } from 'antd-mobile';
 import BaseMsg from './children/baseMsg'
 class Detail extends React.Component {
   render() {
@@ -10,33 +10,31 @@ class Detail extends React.Component {
       <div className="page page_bg">
         <NavTitle title='项目详情' goBack={this.props.history.goBack}/>
         <div className="page_bd">
-          <WingBlank>
-            <Carousel
-              autoplay={true}
-              infinite
-              beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
-              afterChange={index => console.log('slide to', index)}
-            >
-              {this.state.data.map(val => (
-                <a
-                  key={val}
-                  href="http://www.alipay.com"
-                  style={{ display: 'inline-block', width: '100%', height: '3.12rem' }}
-                >
-                  <img
-                    src={`https://zos.alipayobjects.com/rmsportal/${val}.png`}
-                    alt=""
-                    style={{ width: '100%', verticalAlign: 'top' }}
-                    onLoad={() => {
-                      // fire window resize event to change height
-                      window.dispatchEvent(new Event('resize'));
-                      this.setState({ imgHeight: 'auto' });
-                    }}
-                  />
-                </a>
-              ))}
-            </Carousel>
-          </WingBlank>
+          <Carousel
+            autoplay={true}
+            infinite
+            beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
+            afterChange={index => console.log('slide to', index)}
+          >
+            {this.state.data.map(val => (
+              <a
+                key={val}
+                href="http://www.alipay.com"
+                style={{ display: 'inline-block', width: '100%', height: '3.12rem' }}
+              >
+                <img
+                  src={`https://zos.alipayobjects.com/rmsportal/${val}.png`}
+                  alt=""
+                  style={{ width: '100%', verticalAlign: 'top' }}
+                  onLoad={() => {
+                    // fire window resize event to change height
+                    window.dispatchEvent(new Event('resize'));
+                    this.setState({ imgHeight: 'auto' });
+                  }}
+                />
+              </a>
+            ))}
+          </Carousel>
           <BaseMsg history={this.props.history} pageId={this.props.match.params.id}></BaseMsg>
         </div>
         <div className="connet">

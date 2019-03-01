@@ -6,6 +6,7 @@ import List from '../pages/list';
 import Test from '../pages/test'
 import MoreMsg from '../pages/moreMsg'
 import Search from '../pages/search'
+import Load from '../pages/load'
 
 const BasicRoute = () => (
     <HashRouter>
@@ -16,6 +17,7 @@ const BasicRoute = () => (
             <Route exact path="/test" component={Test}/>
             <Route exact path="/moreMsg/:id" component={MoreMsg}/>
             <Route exact path="/search" component={Search}/>
+            <Route exact path="/load" component={Load}/>
         </Switch>
     </HashRouter>
 );

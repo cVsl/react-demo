@@ -3,6 +3,7 @@ import NavTitle from '../../components/navTitle/index.js';
 import HeaderTop from './children/headerTop'
 import TypeList from './children/typeList'
 import ListItem from './children/listItem'
+
 export default class Home extends React.Component {
   render() {
     return (

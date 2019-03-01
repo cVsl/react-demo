@@ -1,5 +1,7 @@
 import React from 'react';
+// import PropTypes from 'prop-types'
 import NavTitle from '../../components/navTitle/index.js';
+// import increaseAction from '../../store/action'
 import { connect } from 'react-redux'
 class Test extends React.Component {
   render() {

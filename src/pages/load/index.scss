@@ -1,0 +1,65 @@
+.itemsTest{
+  position: relative;
+  padding: .3rem;
+  background: #fff;
+  border-bottom: 1px solid #ededed;
+  &:last-child{
+    border-bottom: none;
+  }
+  .status{
+    position: absolute;
+    padding: 0 .1rem;
+    height: .34rem;
+    color: #fff;
+    font-size: .24rem;
+    line-height: .34rem;
+    text-align: center;
+    border-bottom-right-radius: 3px;
+    &.statusColor0 {
+      background: #FA8A2C;
+    }
+    &.statusColor1 {
+      background: #3395ff;
+    }
+    &.statusColor2 {
+      background: #2CB4FA;
+    }
+  }
+  .pic{
+    float: left;
+    width: 2.35rem;
+    height: 1.82rem;
+  }
+  .desc{
+    float: left;
+    width: 4.35rem;
+    height: 1.82rem;
+    margin-left: .2rem;
+    ._lines{
+      width: 4.35rem;
+      height: .45rem;
+      line-height: .45rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .title{
+      height: .47rem;
+      line-height: .47rem;
+      font-size: .34rem;
+      color: #333;
+    }
+    .name{
+      font-size: .28rem;
+      color: #7B7A7A;
+    }
+    .price{
+      font-size: .28rem;
+      color: #FC6805;
+    }
+    .time{
+      font-size: .28rem;
+      color: #7B7A7A;
+    }
+  }
+}
